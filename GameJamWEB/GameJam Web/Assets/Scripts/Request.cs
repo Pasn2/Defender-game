@@ -5,9 +5,10 @@ using UnityEngine;
 public class Request : MonoBehaviour
 {
     [SerializeField] int moneyAdded;
+    
     private void OnCollisionEnter2D(Collision2D other) {
         if(other.collider.tag == "Server"){
-            GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().AddMoney(moneyAdded);
+            GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().AddCapacity(moneyAdded);
             Destroy(gameObject); 
         }
     }

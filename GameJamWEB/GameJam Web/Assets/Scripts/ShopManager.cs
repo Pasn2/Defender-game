@@ -10,5 +10,16 @@ public class ShopManager : MonoBehaviour
        
         
     }
+    public GameObject GetSelectedCard(){
+        foreach (GameObject card in selectedCard)
+        {
+            if(!card.GetComponent<SelectCard>().isEmpty){
+                break;
+            }
+            GameObject emptyCard = card;
+            return emptyCard;
+        }
+        return null;
+    }
     
 }

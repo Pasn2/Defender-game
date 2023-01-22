@@ -20,7 +20,7 @@ public class Server : MonoBehaviour , IDamagable
         health -= _damage;
         if(health <= 0){
             Dead();
-            GameManager.instance.CheckAmountOfServers();
+            //GameManager.instance.CheckAmountOfServers();
         }
     }
     public void Dead(){

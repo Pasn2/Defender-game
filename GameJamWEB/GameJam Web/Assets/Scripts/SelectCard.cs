@@ -5,4 +5,5 @@ using UnityEngine;
 public class SelectCard : MonoBehaviour
 {
     public bool isEmpty = true;
+    
 }
