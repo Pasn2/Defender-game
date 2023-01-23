@@ -20,6 +20,10 @@ public class MoneySystem : MonoBehaviour
     void DisplayMoney(){
         displayGold.text = goldMoney.ToString();
     }
+    public int CheckGold(){
+        
+        return goldMoney;
+    }
     public void AddGold(int _addGold)
     {
         goldMoney += _addGold;

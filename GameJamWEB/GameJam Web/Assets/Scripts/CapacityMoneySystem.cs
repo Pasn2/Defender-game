@@ -20,6 +20,9 @@ public class CapacityMoneySystem : MonoBehaviour
     void DisplayMoney(){
         displayCapacity.text = capacityMoney.ToString();
     }
+    public int CheckCapacity(){
+        return capacityMoney;
+    }
     public void AddCapacity(int _capacityAdd)
     {
         capacityMoney += _capacityAdd;

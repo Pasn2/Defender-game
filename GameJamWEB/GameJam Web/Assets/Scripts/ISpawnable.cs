@@ -4,6 +4,7 @@ using UnityEngine;
 
 public interface ISpawnable
 {
-    public void HighlightSpawnArea();
-    public void Spawn();
+    public void HighLightColor();
+    public void NormalColor();
+    
 }

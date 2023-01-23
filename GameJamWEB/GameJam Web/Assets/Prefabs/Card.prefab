@@ -189,11 +189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a4d7a3af8e387d45ab63c297a46f511, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToBuy: {fileID: 11400000, guid: 291593c718a803341bc908817a58741d, type: 2}
-  canEqiup: 0
-  rectTransform: {fileID: 0}
-  startpos: {x: 0, y: 0, z: 0}
-  shopManager: {fileID: 0}
+  isBuy: 0
 --- !u!1 &7634950034131723410
 GameObject:
   m_ObjectHideFlags: 0
@@ -526,4 +522,16 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 303128915746829762}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7634950033779139332}
+        m_TargetAssemblyTypeName: ShopCard, Assembly-CSharp
+        m_MethodName: UnlockItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
