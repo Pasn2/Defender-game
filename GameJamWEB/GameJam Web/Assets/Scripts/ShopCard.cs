@@ -9,7 +9,7 @@ public class ShopCard : MonoBehaviour
      [SerializeField] SpawnableScriptableObject spawnableScriptable;
      [SerializeField] Button button;
      [SerializeField] bool isBuy = false;
-     [SerializeField]bool isEquip;
+     [SerializeField]bool isEquip = false;
      Image cardImage;
      TMP_Text cardCostText;
      private void Awake() 
@@ -22,17 +22,23 @@ public class ShopCard : MonoBehaviour
     }
    public void UnlockItem()
    {
-     if(GameManager.instance.CheckMoney() > spawnableScriptable.costInCurrency)
-     {
-          isBuy = true;
-          button.GetComponentInChildren<TMP_Text>().text = "Equip";
-          button.onClick.RemoveAllListeners();
-          button.onClick.AddListener(() => EquipDeEquipItem());
-
-     }
+     
+     isBuy = true;
+     button.onClick.RemoveAllListeners();
+     button.onClick.AddListener(() => EquipDeEquipItem());
+     
    }
    public void EquipDeEquipItem()
    {
-     
+     TMP_Text buttonText = button.GetComponentInChildren<TMP_Text>();
+     isEquip = !isEquip;
+     switch(isEquip){
+          case true:
+               buttonText.text = "De Equip";
+          break;
+          case false:
+               buttonText.text = "Equip";
+          break;
+     }
    }
 }

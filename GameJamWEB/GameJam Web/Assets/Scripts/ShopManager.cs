@@ -10,6 +10,7 @@ public class ShopManager : MonoBehaviour
        
         
     }
+
     public GameObject GetSelectedCard(){
         foreach (GameObject card in selectedCard)
         {
