@@ -17,7 +17,7 @@ public class MainMenuScripts : MonoBehaviour
         mainUi.SetActive(!mainUi.activeSelf);
     }
     public void HelpBtn(){
-        helpUi.SetActive(!shopUi.activeSelf);
+        helpUi.SetActive(!helpUi.activeSelf);
         mainUi.SetActive(!mainUi.activeSelf);
     }
     public void SettingsBtn(){

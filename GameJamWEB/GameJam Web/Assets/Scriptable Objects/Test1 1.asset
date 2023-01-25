@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf9a1ca3232283e40a398eab76fdc430, type: 3}
   m_Name: Test1 1
   m_EditorClassIdentifier: 
+  objectImage: {fileID: 0}
   spawnName: kurwy
   spawnDescryption: jebane
-  costInCapacity: 0
-  costInCurrency: 0
+  costInCapacity: 7
+  costInCurrency: 894
   spawnGameObject: {fileID: 5410728741876769684, guid: 91f7e2b4e4f89514f87adaed7b13cc91, type: 3}
   spawnDelay: 1

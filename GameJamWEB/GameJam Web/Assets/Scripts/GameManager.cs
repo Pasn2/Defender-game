@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
     {
         capacityMoney.RemoveCapacity(_capacityRemove);
     }
-    public int CheckCapacity(){
+    public int GetCapacity(){
         
         return capacityMoney.CheckCapacity();
     }
@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
     {
         moneySystem.RemoveGold(_goldRemove);
     }
-    public int CheckMoney(){
+    public int GetMoney(){
         return moneySystem.CheckGold();
     }
 
