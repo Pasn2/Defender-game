@@ -13,7 +13,7 @@ public class CreatingCards : MonoBehaviour
            GameObject card = Instantiate(cardObject,cardContainer.position,Quaternion.identity);
            ShopCard shopCard = card.GetComponent<ShopCard>();
            shopCard.GetAbilityData(selectedObjectDataBase.AbilitydataBase[i]);
-           shopCard.AddShopManager(this.gameObject.GetComponent<ShopManager>());
+           card.GetComponent<EquipingDeEquipingScript>().AddShopManager(this.gameObject.GetComponent<ShopManager>());
            card.transform.SetParent(cardContainer);
         }
     }

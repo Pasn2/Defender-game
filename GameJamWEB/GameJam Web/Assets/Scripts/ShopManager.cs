@@ -5,19 +5,31 @@ using UnityEngine;
 public class ShopManager : MonoBehaviour
 {
 
-    [SerializeField] GameObject[] selectedCard;
-    public GameObject GetSelectedCard()
+    [SerializeField] GameObject selectedCardContainer;
+    [SerializeField] GameObject cardContainer;
+
+    public bool CanBeSelected()
     {
-        foreach (GameObject card in selectedCard)
+        if(selectedCardContainer.transform.childCount >= 3)
         {
-            if(!card.GetComponent<SelectCard>().isEmpty)
-            {
-                break;
-            }
-            GameObject emptyCard = card;
-            return emptyCard;
+            return false;
+            
         }
-        return null;
+        return true;
     }
-    
+    public void AddSelected(GameObject _card)
+    {
+        if(CanBeSelected())
+        {
+            _card.transform.SetParent(selectedCardContainer.transform);
+        }
+        else
+        {
+            
+        }
+    }
+     public void RemoveSelected(GameObject _card)
+    {
+        _card.transform.SetParent(cardContainer.transform);
+    }
 }
