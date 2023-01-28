@@ -14,7 +14,7 @@ public class SelectingSystem : MonoBehaviour
     [SerializeField] TMP_Text errorMassage;
     [SerializeField] float visibleTime;
     private void Start() {
-        buildManager = GameObject.FindObjectOfType<BuildManager>().GetComponent<BuildManager>();
+        
     }
     private void Update() {
         if(isSelected && GameManager.instance.playerInput.actions["Click"].triggered){

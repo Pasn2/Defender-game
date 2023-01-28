@@ -6,7 +6,7 @@ using TMPro;
 using UnityEngine.EventSystems;
 public class ShopCard : MonoBehaviour
 {
-     [SerializeField] SpawnableScriptableObject spawnableScriptable;
+     public SpawnableScriptableObject spawnableScriptable;
      [SerializeField] Button button;
      [SerializeField] bool isBuy = false;
 
@@ -31,22 +31,19 @@ public class ShopCard : MonoBehaviour
    {
      //if(GameManager.instance.GetMoney() >= spawnableScriptable.costInCurrency)
      //{
-          var colorAlpha = cardCostText.color.a;
-          colorAlpha = 0;
-          //fix that shit
-          //RectTransform cardCostRect = cardCostText.GetComponent<RectTransform>();
-          //LeanTween.textAlpha(cardCostRect,targetAlpha,aplhaChangeSpeed);
-          isBuy = true;
-          button.onClick.RemoveAllListeners();
-          button.onClick.AddListener(() => gameObject.GetComponent<EquipingDeEquipingScript>().EquipDeEquipItem());
-          Destroy(cardCostText);
+        var colorAlpha = cardCostText.color.a;
+        colorAlpha = 0;
+        isBuy = true;
+        button.onClick.RemoveAllListeners();
+        button.onClick.AddListener(() => gameObject.GetComponent<EquipingDeEquipingScript>().EquipDeEquipItem());
+        Destroy(cardCostText);
      //}
      
    }
   
-   public void GetAbilityData(SpawnableScriptableObject abilityObject)
-   {
-     spawnableScriptable = abilityObject;
-   }
+  public void GetAbilityData(SpawnableScriptableObject abilityObject)
+  {
+    spawnableScriptable = abilityObject;
+  }
    
 }

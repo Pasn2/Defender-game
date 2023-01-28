@@ -9,8 +9,17 @@ public class MainMenuScripts : MonoBehaviour
     [SerializeField] GameObject shopUi;
     [SerializeField] GameObject helpUi;
     [SerializeField] GameObject settingsUi;
+    [SerializeField] ShopManager shopManager;
+    public static SpawnableScriptableObject[] selectToGameObjects;
     public void PlayBtn(){
+        selectToGameObjects = shopManager.GetSelectedCards();
+        print(selectToGameObjects.Length);
+        if(selectToGameObjects.Length <= 0 )
+        {
+            return;
+        }
         SceneManager.LoadScene(1);
+        
     }
     public void ShopBtn(){
         shopUi.SetActive(!shopUi.activeSelf);

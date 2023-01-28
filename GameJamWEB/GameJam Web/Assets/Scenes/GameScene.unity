@@ -2369,6 +2369,7 @@ GameObject:
   - component: {fileID: 1323393538}
   - component: {fileID: 1323393537}
   - component: {fileID: 1323393536}
+  - component: {fileID: 1323393540}
   - component: {fileID: 1323393539}
   m_Layer: 5
   m_Name: Panel
@@ -2478,11 +2479,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedOject: {fileID: 0}
-  selectedServer: {fileID: 0}
   hightLightColor: {r: 1, g: 0.41037738, b: 0.41037738, a: 1}
   buildManager: {fileID: 1535628682}
   errorMassage: {fileID: 170947474}
   visibleTime: 2
+--- !u!114 &1323393540
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323393534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cb3cb64cb1b18e49b4b77ef457bbb1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1459873930
 GameObject:
   m_ObjectHideFlags: 0
@@ -2901,18 +2912,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d837ab9f30340df4f8a8404b9c16a171, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentMoney: 0
+  moneySystem: {fileID: 0}
+  capacityMoney: {fileID: 0}
   playerInput: {fileID: 0}
-  displayMoney: {fileID: 750206634}
-  startAmountOfServers: 1
-  serverObject: {fileID: 8057278366461591070, guid: dd5c7d50ea5986a49b8e33611bc20aa0, type: 3}
-  computerObject: {fileID: 3314031928217380974, guid: c8047dd7a348efc42ac41f105cbf2524, type: 3}
-  computersSpawnArea: {fileID: 2123971475}
-  serversSpawnArea: {fileID: 1459873931}
-  areaMultiPlayer: 1.1
-  maxSpawnAreaSize: 10
-  startTime: 1
-  delayTime: 60
 --- !u!114 &1677048624
 MonoBehaviour:
   m_ObjectHideFlags: 0

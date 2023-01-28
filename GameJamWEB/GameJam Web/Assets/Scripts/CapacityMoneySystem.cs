@@ -6,13 +6,6 @@ public class CapacityMoneySystem : MonoBehaviour
 {
     public int capacityMoney;
     [SerializeField] TMP_Text displayCapacity;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         DisplayMoney();

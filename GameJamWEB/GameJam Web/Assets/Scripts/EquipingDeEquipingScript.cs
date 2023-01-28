@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 public class EquipingDeEquipingScript : MonoBehaviour
 {
-    ShopManager shopManager;
+    [SerializeField]ShopManager shopManager;
     [SerializeField] bool isEquip = false;
     [SerializeField] Button button;
     TMP_Text buttonText;
@@ -20,7 +20,7 @@ public class EquipingDeEquipingScript : MonoBehaviour
     }
     public void AddShopManager(ShopManager _shopManager)
     {
-     shopManager = _shopManager;
+        shopManager = _shopManager;
     }
     public void RemoveFromSelect()
     {
@@ -28,20 +28,23 @@ public class EquipingDeEquipingScript : MonoBehaviour
     }
     public void EquipDeEquipItem()
     {
-        if(shopManager.CanBeSelected() || isEquip || !isEquip)
+        
+        switch(isEquip)
         {
-            isEquip = !isEquip;
-            switch(isEquip)
-            {
-                case true:
+            case true:
+                if(shopManager.CanBeSelected())
+                {
                     AddToSelect();
                     buttonText.text = "De Equip";
-                break;
-                case false:
-                    RemoveFromSelect();
-                    buttonText.text = "Equip";
-                break;
-            }
+                    isEquip = false;
+                } 
+                    
+            break;
+            case false:
+                RemoveFromSelect();
+                buttonText.text = "Equip";
+                isEquip = true;
+            break;
         }
         
     }
