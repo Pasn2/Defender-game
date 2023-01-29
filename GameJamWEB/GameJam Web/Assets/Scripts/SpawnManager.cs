@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
+    [SerializeField] float areaMultiPlayer;
+    [SerializeField] float maxSpawnAreaSize;
+    [SerializeField] float startTime;
+    [SerializeField] float delayTime;
     [SerializeField] int startAmountOfServers;
     [SerializeField] GameObject serverObject;
     [SerializeField] GameObject computerObject;
     [SerializeField] BoxCollider2D computersSpawnArea;
     [SerializeField] BoxCollider2D serversSpawnArea;
-    [SerializeField] float areaMultiPlayer;
-    [SerializeField] float maxSpawnAreaSize;
-    [SerializeField] float startTime;
-    [SerializeField] float delayTime;
     GameObject[] currentServers;
      void Start()
     {

@@ -11,12 +11,4 @@ public class StartGameManager : MonoBehaviour
             selectCards[i].abilityObject = MainMenuScripts.selectToGameObjects[i];
         }
     }
-    
-        
-    
-
-    void Update()
-    {
-        
-    }
 }
