@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1563562799462322258}
   - component: {fileID: 1563562799462322259}
   - component: {fileID: 5338334327401009999}
+  - component: {fileID: 1414009949101065381}
   - component: {fileID: 1563562799462322256}
   - component: {fileID: 1563562799462322261}
   - component: {fileID: 1563562799462322260}
@@ -101,6 +102,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 2
+--- !u!114 &1414009949101065381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563562799462322270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15944a9b6bd5e524fa91337fd3f73bbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1563562799462322256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,9 +128,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   speed: 1
-  events:
-    m_PersistentCalls:
-      m_Calls: []
   damage: 0
   maxDistanceToWeb: 0.1
   targetToSearch: Web

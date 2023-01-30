@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Request : MonoBehaviour
+public class Request : MonoBehaviour,IEntity
 {
     [SerializeField] int moneyAdded;
-    
-    private void OnCollisionEnter2D(Collision2D other) {
-        if(other.collider.tag == "Server"){
-            GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().AddCapacity(moneyAdded);
-            Destroy(gameObject); 
-        }
+    public void Use(GameObject _target)
+    {
+        print("KK");
+        GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().AddCapacity(moneyAdded);
+        Destroy(gameObject); 
     }
+    
 }

@@ -3186,6 +3186,8 @@ GameObject:
   - component: {fileID: 1677048624}
   - component: {fileID: 1677048625}
   - component: {fileID: 1677048626}
+  - component: {fileID: 1677048628}
+  - component: {fileID: 1677048627}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameManager
@@ -3220,8 +3222,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d837ab9f30340df4f8a8404b9c16a171, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moneySystem: {fileID: 0}
-  capacityMoney: {fileID: 0}
+  moneySystem: {fileID: 1677048628}
+  capacityMoney: {fileID: 1677048627}
   playerInput: {fileID: 0}
 --- !u!114 &1677048624
 MonoBehaviour:
@@ -3288,6 +3290,34 @@ MonoBehaviour:
   computerObject: {fileID: 3314031928217380974, guid: c8047dd7a348efc42ac41f105cbf2524, type: 3}
   computersSpawnArea: {fileID: 2123971475}
   serversSpawnArea: {fileID: 1459873931}
+--- !u!114 &1677048627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677048620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50736544bb1891144baeb72edaba4fb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  capacityMoney: 0
+  displayCapacity: {fileID: 0}
+--- !u!114 &1677048628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677048620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5305416e36e7308489cd7e41a2fad079, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goldMoney: 0
+  displayGold: {fileID: 0}
 --- !u!1 &1692571064
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,7 +7,6 @@ public class FollowPath : MonoBehaviour
 {
     [SerializeField] Transform target;
     [SerializeField] float speed;
-    [SerializeField] UnityEvent events;
     [SerializeField] float damage;
     [SerializeField] float maxDistanceToWeb;
     [SerializeField] string targetToSearch;

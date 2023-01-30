@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 105207686205072156}
   - component: {fileID: 105207686205072155}
   - component: {fileID: 105207686205072154}
+  - component: {fileID: 1241773416835108389}
   - component: {fileID: 105207686205072153}
   - component: {fileID: 105207686205072157}
   - component: {fileID: 105207686205072158}
@@ -101,6 +102,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moneyAdded: 20
+--- !u!114 &1241773416835108389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105207686205072152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15944a9b6bd5e524fa91337fd3f73bbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &105207686205072153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,9 +128,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   speed: 1.5
-  events:
-    m_PersistentCalls:
-      m_Calls: []
   damage: 0
   maxDistanceToWeb: 0.1
   targetToSearch: Web
