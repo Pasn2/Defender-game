@@ -2082,6 +2082,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cb3cb64cb1b18e49b4b77ef457bbb1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundManager: {fileID: 0}
   selectCards:
   - {fileID: 1866830808}
   - {fileID: 120907891}
@@ -2800,6 +2801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cb3cb64cb1b18e49b4b77ef457bbb1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundManager: {fileID: 5246488319961323044, guid: 981e094aaeacd3c4899378659cb61fda, type: 3}
   selectCards: []
 --- !u!1 &1459873930
 GameObject:

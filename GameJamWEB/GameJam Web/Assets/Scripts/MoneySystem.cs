@@ -8,7 +8,7 @@ public class MoneySystem : MonoBehaviour
     [SerializeField] TMP_Text displayGold;
     void Update()
     {
-        DisplayMoney();
+       // DisplayMoney();
     }
     void DisplayMoney()
     {

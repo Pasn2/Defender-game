@@ -9,6 +9,7 @@ public class BuildManager : MonoBehaviour
     public void SpawnObject(GameObject _objectToSpawn,Vector3 _localization,float _spawnDelay){
         print("KUTAS");
         if(!IsDelay){
+            AudioManager.instance.PlaySound("BuildObject");
             Instantiate(_objectToSpawn,_localization,Quaternion.identity);
             IsDelay = true;
             StartCoroutine(Delay(_spawnDelay));
