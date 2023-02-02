@@ -8,6 +8,7 @@ public class Computer : MonoBehaviour
     [SerializeField] Slider infectionSlider;
     [SerializeField] float maxInfection;
     float currentInfection;
+    
     [SerializeField] Color curedColor;
     SpriteRenderer sprite;
 
