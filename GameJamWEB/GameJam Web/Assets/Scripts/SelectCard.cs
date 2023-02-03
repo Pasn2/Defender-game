@@ -19,6 +19,7 @@ public class SelectCard : MonoBehaviour
     }
     public void SelectObject()
     {
+        print("SelectObject in Select card work propertly");
         selecting.SelectObject(abilityObject);
     }    
 }

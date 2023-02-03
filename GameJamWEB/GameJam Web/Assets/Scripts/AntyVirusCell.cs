@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class AntyVirusCell : MonoBehaviour,IDamagable
 {
-    public void TakeDamage(float _damage){}
+    public void TakeDamage(float _damage)
+    {
+        Dead();
+    }
     public void Health(float _health){}
     public void Dead(){
         Destroy(gameObject);
@@ -13,7 +16,7 @@ public class AntyVirusCell : MonoBehaviour,IDamagable
         print(other.collider.tag);
         switch(other.collider.tag){
             case "Virus":
-                other.collider.GetComponent<IDamagable>().Dead();
+                other.collider.GetComponent<IDead>().Dead();
                 Dead();
             break;
             case "Computer":

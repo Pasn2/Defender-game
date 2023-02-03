@@ -34,4 +34,5 @@ public class MainMenuScripts : MonoBehaviour
         mainUi.SetActive(!mainUi.activeSelf);
     }
     
+    
 }

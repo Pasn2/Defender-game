@@ -18,11 +18,12 @@ public class SelectingSystem : MonoBehaviour
     }
     private void Update() 
     {
-        print(isSelected);
+        
         if(isSelected)
         {
+            print(isSelected + "is Selected in Selecting system");
             RaycastHit2D raycastHit2D = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue()),Vector2.zero);
-            print(raycastHit2D.collider.name);
+            print(raycastHit2D.collider.name + "Raycasthit name");
             if(raycastHit2D.collider.GetComponent<ISpawnable>() != null)
             {
                 Transform selectedServer = raycastHit2D.collider.transform;
@@ -33,7 +34,8 @@ public class SelectingSystem : MonoBehaviour
         }
     }
     public void SelectObject(SpawnableScriptableObject spawnobject){
-        print("Selected!");
+        print("SelectedObject in Selecting system work propertly!!");
         selectedOject = spawnobject;
+        print(selectedOject.name + "selectObject name");
     }
 }

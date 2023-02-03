@@ -9,6 +9,7 @@ public class Computer : MonoBehaviour
     [SerializeField] float maxInfection;
     float currentInfection;
     
+    
     [SerializeField] Color curedColor;
     SpriteRenderer sprite;
 

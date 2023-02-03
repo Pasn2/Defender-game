@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Virus : MonoBehaviour,IDamagable,IEntity
+public class Virus : MonoBehaviour,IEntity,IDead
 {
     [SerializeField] int damage;
 
@@ -11,10 +11,6 @@ public class Virus : MonoBehaviour,IDamagable,IEntity
         Destroy(gameObject);
     }
 
-    public void TakeDamage(float _damage)
-    {
-        throw new System.NotImplementedException();
-    }
     public void Use(GameObject _target)
     {
         IDamagable damageableObject = _target.GetComponent<IDamagable>();
