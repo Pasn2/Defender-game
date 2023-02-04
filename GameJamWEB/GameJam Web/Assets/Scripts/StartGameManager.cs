@@ -6,7 +6,7 @@ public class StartGameManager : MonoBehaviour
 {
     [SerializeField] GameObject soundManager;
     [SerializeField] SelectCard[] selectCards;
-    private void Start() 
+    private void Awake() 
     {
         print(MainMenuScripts.selectToGameObjects.Length);
         Instantiate(soundManager,transform.position,Quaternion.identity);

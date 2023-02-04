@@ -12,6 +12,7 @@ public class BuildManager : MonoBehaviour
             print("is delay == false");
             AudioManager.instance.PlaySound("BuildObject");
             Instantiate(_objectToSpawn,_localization,Quaternion.identity);
+            print(_objectToSpawn.name + "XXXXXXXXXXXXXXXXXXXX");
             IsDelay = true;
             StartCoroutine(Delay(_spawnDelay));
         }

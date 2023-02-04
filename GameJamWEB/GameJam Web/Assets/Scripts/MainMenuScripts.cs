@@ -14,6 +14,7 @@ public class MainMenuScripts : MonoBehaviour
     public void PlayBtn(){
         selectToGameObjects = shopManager.GetSelectedCards();
         print(selectToGameObjects.Length);
+        print(selectToGameObjects[2].name);
         if(selectToGameObjects.Length <= 0 )
         {
             return;

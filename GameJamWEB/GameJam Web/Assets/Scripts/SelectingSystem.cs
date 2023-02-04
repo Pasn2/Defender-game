@@ -19,13 +19,14 @@ public class SelectingSystem : MonoBehaviour
     private void Update() 
     {
         
-        if(isSelected)
+        if(isSelected && Input.GetKeyDown(KeyCode.Mouse0))
         {
             print(isSelected + "is Selected in Selecting system");
             RaycastHit2D raycastHit2D = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue()),Vector2.zero);
             print(raycastHit2D.collider.name + "Raycasthit name");
             if(raycastHit2D.collider.GetComponent<ISpawnable>() != null)
             {
+                print(raycastHit2D.collider.name);
                 Transform selectedServer = raycastHit2D.collider.transform;
                 print("Builded");
                 Vector3 selectedVector3 = new Vector3(selectedServer.transform.position.x,selectedServer.transform.position.y,selectedServer.transform.position.z);

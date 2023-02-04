@@ -46,28 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundsArray:
   - soundCategory: 1
-    soundName: PlaceObjects
-    mute: 0
-    clip: {fileID: 8300000, guid: 69483c28315372a43a42e5c06e53f4e7, type: 3}
-    volume: 1
-    pitch: 1
-    source: {fileID: 0}
-  - soundCategory: 1
-    soundName: PlaceObjects
-    mute: 0
-    clip: {fileID: 8300000, guid: 69483c28315372a43a42e5c06e53f4e7, type: 3}
-    volume: 1
-    pitch: 1
-    source: {fileID: 0}
-  - soundCategory: 1
-    soundName: PlaceObjects
-    mute: 0
-    clip: {fileID: 8300000, guid: 69483c28315372a43a42e5c06e53f4e7, type: 3}
-    volume: 1
-    pitch: 1
-    source: {fileID: 0}
-  - soundCategory: 1
-    soundName: PlaceObjects
+    soundName: BuildObject
     mute: 0
     clip: {fileID: 8300000, guid: 69483c28315372a43a42e5c06e53f4e7, type: 3}
     volume: 1
