@@ -9,12 +9,8 @@ public class ShopCard : MonoBehaviour
      public SpawnableScriptableObject spawnableScriptable;
      [SerializeField] Button button;
      [SerializeField] bool isBuy = false;
-
-    
      Image cardImage;
      TMP_Text cardCostText;
-
- 
      private const float aplhaChangeSpeed = 3f;
      private const float targetAlpha = 0;
      

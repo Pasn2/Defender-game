@@ -48,6 +48,10 @@ public class GameManager : MonoBehaviour
     public int GetMoney(){
         return moneySystem.CheckGold();
     }
+    public void CheckAmountOfServers()
+    {
+        
+    }
 
   
     

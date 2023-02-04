@@ -23,7 +23,6 @@ public class SelectingSystem : MonoBehaviour
         {
             print(isSelected + "is Selected in Selecting system");
             RaycastHit2D raycastHit2D = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue()),Vector2.zero);
-            print(raycastHit2D.collider.name + "Raycasthit name");
             if(raycastHit2D.collider.GetComponent<ISpawnable>() != null)
             {
                 print(raycastHit2D.collider.name);
