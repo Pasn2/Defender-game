@@ -36,6 +36,7 @@ public class AdManager : MonoBehaviour,IUnityAdsListener
         else
         {
             Debug.Log("Rewarded ad is not ready");
+            return;
         }
     }
 
