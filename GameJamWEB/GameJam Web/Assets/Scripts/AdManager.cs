@@ -27,6 +27,24 @@ public class AdManager : MonoBehaviour,IUnityAdsListener
     {
         Advertisement.Initialize(gameid);
     }
+    public void ShowBanner()
+    {
+        if(Advertisement.IsReady("Banner_"+platformName))
+        {
+            Advertisement.Banner.SetPosition(BannerPosition.TOP_LEFT);
+            Advertisement.Banner.Show("Banner_"+platformName);
+        }
+        else
+        {
+            print("Banner not ready trying again in 1s");
+            StartCoroutine(RepeatBannerShow());
+        }
+    }
+    IEnumerator RepeatBannerShow()
+    {
+        yield return new WaitForSeconds(1f);
+        ShowBanner();
+    }
     public void PlayRevardedAd()
     {
         if(Advertisement.IsReady("Rewarded_" + platformName))

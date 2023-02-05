@@ -48,8 +48,22 @@ public class GameManager : MonoBehaviour
     public int GetMoney(){
         return moneySystem.CheckGold();
     }
-    public void CheckAmountOfServers()
+    public int CheckAmountOfServers()
     {
+        return GetAllServers().Length;
+    }
+    public GameObject[] GetAllServers()
+    {
+        GameObject[] servers = GameObject.FindGameObjectsWithTag("Server");
+        return servers;
+    }
+    public void HealAllServers()
+    {
+        foreach (GameObject server in GetAllServers())
+        {
+            server.GetComponent<Server>().Health(200);
+        }
+        print("All Servers Healed");
         
     }
 

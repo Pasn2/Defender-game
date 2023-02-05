@@ -7,7 +7,7 @@ public class GameOverMenu : MonoBehaviour
     public void ContinueWithAd()
     {
         AdManager.instance.PlayRevardedAd();
-
+        GameManager.instance.HealAllServers();
     }
     public void RetryBtn()
     {

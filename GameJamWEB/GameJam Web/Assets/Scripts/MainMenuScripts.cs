@@ -11,6 +11,10 @@ public class MainMenuScripts : MonoBehaviour
     [SerializeField] GameObject settingsUi;
     [SerializeField] ShopManager shopManager;
     public static SpawnableScriptableObject[] selectToGameObjects;
+    private void Start() 
+    {
+        AdManager.instance.ShowBanner();
+    }
     public void PlayBtn(){
         selectToGameObjects = shopManager.GetSelectedCards();
         print(selectToGameObjects.Length);
