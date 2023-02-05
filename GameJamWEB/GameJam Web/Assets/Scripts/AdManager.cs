@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Advertisements;
+using System;
 public class AdManager : MonoBehaviour,IUnityAdsListener
 {
     public static AdManager instance;
@@ -12,6 +13,7 @@ public class AdManager : MonoBehaviour,IUnityAdsListener
     #else
     string gameid = "5149291";
     string platformName = "Android";
+    Action onRewardedAdPlay;
     #endif
     private void Awake()
     {
@@ -47,6 +49,7 @@ public class AdManager : MonoBehaviour,IUnityAdsListener
     }
     public void PlayRevardedAd()
     {
+        
         if(Advertisement.IsReady("Rewarded_" + platformName))
         {
             Advertisement.Show("Rewarded_" + platformName);
@@ -77,7 +80,7 @@ public class AdManager : MonoBehaviour,IUnityAdsListener
     {
         if(placementId == "Rewarded_" + platformName && showResult == ShowResult.Finished)
         {
-            print("DEJ MU DRUGOM SZANSE");
+            onRewardedAdPlay.Invoke();
         }
     }
 }
