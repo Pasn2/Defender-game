@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] CapacityMoneySystem capacityMoney;
     public PlayerInput playerInput;
     
-    
+    [SerializeField] GameObject gameOverMenu;
     private void Awake() {
         if (instance != null && instance != this) 
         { 
@@ -21,10 +21,14 @@ public class GameManager : MonoBehaviour
             instance = this;
         }
     }
-     private void Start() {
+     private void Start()
+    {
         playerInput = GetComponent<PlayerInput>();
     }
- 
+    private void LateUpdate() 
+    {
+        CheckGameOver();
+    }
     public void AddCapacity(int _capacityAdd)
     {
         capacityMoney.AddCapacity(_capacityAdd);
@@ -66,7 +70,14 @@ public class GameManager : MonoBehaviour
         print("All Servers Healed");
         
     }
-
+    public void CheckGameOver()
+    {
+        if(GetAllServers().Length <= 0)
+        {
+            gameOverMenu.SetActive(true);
+            Time.timeScale =0;
+        }
+    }
   
     
 }
