@@ -33,7 +33,7 @@ public class AdManager : MonoBehaviour,IUnityAdsListener
     {
         if(Advertisement.IsReady("Banner_"+platformName))
         {
-            Advertisement.Banner.SetPosition(BannerPosition.TOP_LEFT);
+            Advertisement.Banner.SetPosition(BannerPosition.TOP_CENTER);
             Advertisement.Banner.Show("Banner_"+platformName);
         }
         else
