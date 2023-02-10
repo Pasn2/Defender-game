@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class CameraZoom : MonoBehaviour
 {
     [SerializeField] Camera playerCam;
@@ -11,6 +11,7 @@ public class CameraZoom : MonoBehaviour
     Vector2 firstTouchPrevPos;
     Vector2 secoundTouchPrevPos;
     [SerializeField] float zoomModifierSpeed = 0.3f;
+    [SerializeField] TMP_Text testdisplay;
 
     void Start()
     {
@@ -19,7 +20,7 @@ public class CameraZoom : MonoBehaviour
 
     void Update()
     {
-        if(Input.touchCount > 2)
+        if(Input.touchCount == 2)
         {
             Touch firstTouch = Input.GetTouch(0);
             Touch secoundTouch = Input.GetTouch(1);
@@ -38,7 +39,7 @@ public class CameraZoom : MonoBehaviour
             }
 
             playerCam.orthographicSize = Mathf.Clamp(playerCam.orthographicSize,2f,10f);
-
+            testdisplay.SetText(playerCam.gameObject.transform.position + "X" + firstTouch.position);
         }
     }
 }

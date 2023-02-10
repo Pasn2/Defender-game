@@ -1158,7 +1158,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCam: {fileID: 0}
-  zoomModifierSpeed: 4.7
+  zoomModifierSpeed: 0.2
+  testdisplay: {fileID: 170947474}
 --- !u!114 &519420034
 MonoBehaviour:
   m_ObjectHideFlags: 0
