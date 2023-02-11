@@ -12,7 +12,6 @@ public class StartGameManager : MonoBehaviour
         Instantiate(soundManager,transform.position,Quaternion.identity);
         for (int i = 0; i < MainMenuScripts.selectToGameObjects.Length; i++)
         {
-            print(i);
             print(MainMenuScripts.selectToGameObjects[i].name);
             selectCards[i].abilityObject = MainMenuScripts.selectToGameObjects[i];
         }

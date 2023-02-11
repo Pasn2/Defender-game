@@ -5,7 +5,6 @@ using UnityEngine.InputSystem;
 using TMPro;
 public class GameManager : MonoBehaviour
 {
-    //GameManager jak to manager jest odpowiedzialny za przekazywanie informacji
     public static GameManager instance;
     [SerializeField] MoneySystem moneySystem;
     [SerializeField] CapacityMoneySystem capacityMoney;
@@ -67,8 +66,6 @@ public class GameManager : MonoBehaviour
         {
             server.GetComponent<Server>().Health(200);
         }
-        print("All Servers Healed");
-        
     }
     public void CheckGameOver()
     {
@@ -78,6 +75,4 @@ public class GameManager : MonoBehaviour
             Time.timeScale =0;
         }
     }
-  
-    
 }

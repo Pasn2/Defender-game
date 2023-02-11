@@ -8,7 +8,7 @@ public class CapacityMoneySystem : MonoBehaviour
     [SerializeField] TMP_Text displayCapacity;
     void Update()
     {
-        //DisplayMoney();
+        DisplayMoney();
     }
     void DisplayMoney(){
         displayCapacity.text = capacityMoney.ToString();

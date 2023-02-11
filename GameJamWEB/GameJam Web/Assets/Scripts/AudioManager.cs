@@ -29,12 +29,10 @@ public class AudioManager : MonoBehaviour
     }
     public void PlaySound(string _audioClipName)
     {
-        print("x");
         Sound sound = Array.Find(soundsArray,sound => sound.soundName == _audioClipName);
         sound.source.Play();
         
     }
-    //Change to one function
     public void SFXMute()
     {
         foreach (Sound sound in soundsArray)

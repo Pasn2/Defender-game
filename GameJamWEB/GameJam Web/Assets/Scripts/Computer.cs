@@ -8,8 +8,6 @@ public class Computer : MonoBehaviour
     [SerializeField] Slider infectionSlider;
     [SerializeField] float maxInfection;
     float currentInfection;
-    
-    
     [SerializeField] Color curedColor;
     SpriteRenderer sprite;
 
@@ -31,7 +29,6 @@ public class Computer : MonoBehaviour
     }
     public void RemoveInfection(float _removeInfection){
         currentInfection -= _removeInfection;
-        print("KDAWD");
         if(currentInfection <= 0){
             Cure();
         }
@@ -40,10 +37,7 @@ public class Computer : MonoBehaviour
         sprite.material.color = curedColor;
     }
     private void OnTriggerEnter2D(Collider2D other) {
-        print("d");
-        print(other.tag);
         if(other.tag == "AntyVirus"){
-            print("x");
             RemoveInfection(30);
             other.GetComponent<AntyVirusCell>().Dead();
         }
