@@ -4,19 +4,18 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] float moveSpeed;
+    [SerializeField] Camera cam;
     void Start()
     {
-        
+        cam = GetComponent<Camera>();
     }
-
-    // Update is called once per frame
     void Update()
     {
-        if(Input.touchCount > 1)
+        if(Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Moved)
         {
-            Touch firstTouch = Input.GetTouch(0);
-            transform.position = firstTouch.position;
+            Vector2 touchDeltaPosition = Input.GetTouch(0).deltaPosition;
+            transform.Translate(-touchDeltaPosition.x * moveSpeed * Time.deltaTime, -touchDeltaPosition.y * moveSpeed * Time.deltaTime, 0);
         }
     }
 }

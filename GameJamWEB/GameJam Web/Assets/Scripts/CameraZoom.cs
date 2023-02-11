@@ -38,8 +38,8 @@ public class CameraZoom : MonoBehaviour
                 playerCam.orthographicSize -= zoomModifer;
             }
 
-            playerCam.orthographicSize = Mathf.Clamp(playerCam.orthographicSize,2f,10f);
-            testdisplay.SetText(playerCam.gameObject.transform.position + "X" + firstTouch.position);
+            playerCam.orthographicSize = Mathf.Clamp(playerCam.orthographicSize,2f,15f);
+            testdisplay.SetText(playerCam.gameObject.transform.position + "X " + firstTouch + "Z " + secoundTouch + "XZC" + playerCam.orthographicSize);
         }
     }
 }
