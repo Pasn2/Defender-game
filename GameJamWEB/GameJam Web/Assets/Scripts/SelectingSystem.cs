@@ -21,7 +21,7 @@ public class SelectingSystem : MonoBehaviour
         
         if(isSelected && Input.GetKeyDown(KeyCode.Mouse0))
         {
-            RaycastHit2D raycastHit2D = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue()),Vector2.zero);
+            RaycastHit2D raycastHit2D = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position),Vector2.zero);
             if(raycastHit2D.collider.GetComponent<ISpawnable>() != null)
             {
                 Transform selectedServer = raycastHit2D.collider.transform;

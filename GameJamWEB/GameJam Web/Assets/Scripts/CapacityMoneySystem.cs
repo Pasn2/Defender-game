@@ -11,7 +11,7 @@ public class CapacityMoneySystem : MonoBehaviour
         DisplayMoney();
     }
     void DisplayMoney(){
-        displayCapacity.text = capacityMoney.ToString();
+//        displayCapacity.text = capacityMoney.ToString();
     }
     public int CheckCapacity(){
         return capacityMoney;

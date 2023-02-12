@@ -13,6 +13,7 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] GameObject computerObject;
     [SerializeField] BoxCollider2D computersSpawnArea;
     [SerializeField] BoxCollider2D serversSpawnArea;
+    [SerializeField] Transform spawnPosition;
     GameObject[] currentServers;
      void Start()
     {
