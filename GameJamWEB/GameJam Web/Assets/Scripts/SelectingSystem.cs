@@ -19,9 +19,10 @@ public class SelectingSystem : MonoBehaviour
     private void Update() 
     {
         
-        if(isSelected && Input.GetKeyDown(KeyCode.Mouse0))
+        if(isSelected && Input.GetKeyDown(KeyCode.Mouse0) && Input.GetTouch(0).phase == UnityEngine.TouchPhase.Began)
         {
-            RaycastHit2D raycastHit2D = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position),Vector2.zero);
+            Touch firstTouch = Input.GetTouch(0);
+            RaycastHit2D raycastHit2D = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(firstTouch.position),Vector2.zero);
             if(raycastHit2D.collider.GetComponent<ISpawnable>() != null)
             {
                 Transform selectedServer = raycastHit2D.collider.transform;
