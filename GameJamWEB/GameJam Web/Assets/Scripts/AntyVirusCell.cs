@@ -26,4 +26,5 @@ public class AntyVirusCell : MonoBehaviour,IDamagable
         }
     }
     
+    
 }

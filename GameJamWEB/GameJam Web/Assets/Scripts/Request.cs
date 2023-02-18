@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Request : MonoBehaviour,IEntity
+public class Request : MonoBehaviour,IUse
 {
     [SerializeField] int moneyAdded;
     public void Use(GameObject _target)
