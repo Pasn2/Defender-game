@@ -7,12 +7,12 @@ TagManager:
   - Web
   - Server
   - Computer
-  - Virus
   - GameManager
-  - AntyVirus
-  - Request
   - Card
   - Selected
+  - Opponent
+  - Ally
+  - Request
   layers:
   - Default
   - TransparentFX

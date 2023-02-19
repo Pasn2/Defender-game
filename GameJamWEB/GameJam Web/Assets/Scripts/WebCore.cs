@@ -15,23 +15,26 @@ public class WebCore : MonoBehaviour
         computerTargets = GameObject.FindGameObjectsWithTag("Computer");
     }
     private void OnTriggerEnter2D(Collider2D other) {
+        print(other.name);
         FollowPath followPathObject = other.gameObject.GetComponent<FollowPath>();
         if(followPathObject != null){
             RefreshTargets();
             switch(other.tag){
-                case "Virus":
+                case "Opponent":
                     ChangeDirection(serverTargets,followPathObject);
+                    print("Changed opponent");
                 break;
-                case "AntyVirus":
+                case "Ally":
                     ChangeDirection(computerTargets,followPathObject);
-                break;
-                case "Request":
-                    ChangeDirection(serverTargets,followPathObject);
+                    print("Changed Ally");
                 break;
             }
         }
     }
-    void ChangeDirection(GameObject[] _possibleTargets,FollowPath _follow){
+    void ChangeDirection(GameObject[] _possibleTargets,FollowPath _follow)
+    {
         _follow.ChangeTarget(_possibleTargets[Random.Range(0,_possibleTargets.Length)].transform,gameObject.transform,1);
+        print("Change Direction works");
     }
+
 }

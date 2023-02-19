@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3841013650179945219}
   m_Layer: 0
   m_Name: AntyVirusCell
-  m_TagString: AntyVirus
+  m_TagString: Ally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130,9 +130,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   speed: 2
-  events:
-    m_PersistentCalls:
-      m_Calls: []
   damage: 0
   maxDistanceToWeb: 0
   targetToSearch: Web
