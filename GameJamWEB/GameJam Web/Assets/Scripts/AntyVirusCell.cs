@@ -15,7 +15,7 @@ public class AntyVirusCell : MonoBehaviour,IDamagable
     private void OnCollisionEnter2D(Collision2D other) {
         print(other.collider.tag);
         switch(other.collider.tag){
-            case "Virus":
+            case "Opponent":
                 other.collider.GetComponent<IDead>().Dead();
                 Dead();
             break;

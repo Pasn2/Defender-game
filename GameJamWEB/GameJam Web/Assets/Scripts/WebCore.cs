@@ -16,7 +16,9 @@ public class WebCore : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other) {
         print(other.name);
+        print("DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD");
         FollowPath followPathObject = other.gameObject.GetComponent<FollowPath>();
+        print(followPathObject.name + " AWDAWDADAWDAWDAWDWA");
         if(followPathObject != null){
             RefreshTargets();
             switch(other.tag){
