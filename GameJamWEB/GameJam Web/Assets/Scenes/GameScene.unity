@@ -3645,6 +3645,7 @@ GameObject:
   - component: {fileID: 1323393536}
   - component: {fileID: 1323393540}
   - component: {fileID: 1323393539}
+  - component: {fileID: 1323393541}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -3774,6 +3775,21 @@ MonoBehaviour:
   - {fileID: 1866830808}
   - {fileID: 120907891}
   - {fileID: 1726393932}
+--- !u!114 &1323393541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323393534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43323a88dd84e6a418c5ed699bcf4593, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serverObject: {fileID: 11400000, guid: 99da6e4ce7dd7494f9a5eb4d6ea5c168, type: 2}
+  selectingSystem: {fileID: 1323393539}
+  spawnFrecuency: 60
 --- !u!1 &1459873930
 GameObject:
   m_ObjectHideFlags: 0

@@ -23,6 +23,7 @@ public class MainMenuScripts : MonoBehaviour
         {
             return;
         }
+        RotationManager.instance.ChangeLandscape();
         SceneManager.LoadScene(1);
         
     }
