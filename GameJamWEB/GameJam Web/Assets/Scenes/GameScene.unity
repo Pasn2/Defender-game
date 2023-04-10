@@ -3789,7 +3789,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serverObject: {fileID: 11400000, guid: 99da6e4ce7dd7494f9a5eb4d6ea5c168, type: 2}
   selectingSystem: {fileID: 1323393539}
-  spawnFrecuency: 60
+  spawnFrecuency: 15
 --- !u!1 &1459873930
 GameObject:
   m_ObjectHideFlags: 0
